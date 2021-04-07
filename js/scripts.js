@@ -22,7 +22,24 @@ Game.prototype.assignPlayer = function () {
   const player2 = player(2);
 }
 
+function showButton(show) {
+
+}
+
 
 
 
 // -----User Interface Logic-----
+
+$(document).ready(function () {
+  $("#addPlayer1").on("click", function () {
+    $("button#player1").show()
+  })
+  $("#addPlayer2").on("click", function () {
+    $("button#player2").show()
+  })
+  // addPlayer = $("#addPlayer")[0];
+  // if (addPlayer.submit === true) {
+  //   $("#player1").show();
+  // }
+})

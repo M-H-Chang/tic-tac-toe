@@ -1,3 +1,6 @@
+h1 {
+  color: white;
+}
 .grid-container {
   min-height: 100vh;
   display: flex;
@@ -14,7 +17,6 @@
   width: 200px;
 }
 
-#block0, #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8 {
-  padding: 20px; width: 300px; border: 2px solid white;
+#player1, #player2 {
+  display: none;
 }
-

@@ -1,4 +1,6 @@
-## Specs
+## 
+  
+Specs
 
 Describe: Game()
 
@@ -6,12 +8,42 @@ Test: It will add this constructor to the game.
 Code: function Game()
 Output: No output yet.
 
+Describe: Game.prototype.addPlayers
+
+Test: It will add a player to the game object that the method is called on.
+Code:
+const players = new Game()
+const player1 = ("Player1");
+const player2 = ("Player2");
+players.addPlayers(player1);
+players.addPlayers(player2);
+Expected Output:
+players == {
+  players: {"player1", "player2"}
+} 
+
+Describe: Game.prototype.assignId
+Test: It will assign an ID for each player inputted.
+Code: 
+const players = new Game()
+const player1 = ("Player1")
+const player2 = ("Player2")
+Expected Output:
+players === {players: {"player1"(1), "player2"(2)}}
+
+Describe: Game.prototype.assignPlayer
+Test: It will assign an user for each player inputted.
+Code: 
+const player1 = players(1);
+const player2 = players(2):
+Expected Output:
+players(1) should return player1 and player(2) should return player2. 
 
 
 
-# __
+# _Tic-Tac-Toe Game_
 
-#### __
+#### _Let's two users play the tic-tac-toe game._
 
 #### By _**Min Chang, Grafton Borge, & Rami Ahmed**_
 

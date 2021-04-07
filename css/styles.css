@@ -1,0 +1,20 @@
+.grid-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+#block0, #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8 {
+  padding: 20px; width: 300px; border: 2px solid white;
+}
+
+.grid-item {
+  height: 200px;
+  width: 200px;
+}
+
+#block0, #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8 {
+  padding: 20px; width: 300px; border: 2px solid white;
+}
+

@@ -8,15 +8,28 @@ h1 {
   align-items: center;
   background-color: black;
 }
-#block0, #block1, #block2, #block3, #block4, #block5, #block6, #block7, #block8 {
-  padding: 20px; width: 300px; border: 2px solid white;
+#block0, 
+#block1, 
+#block2, 
+#block3, 
+#block4, 
+#block5, 
+#block6, 
+#block7,
+#block8 {
+  padding: 20px; 
+  width: 300px; 
+  border: 1px solid red;
+  border-radius: 2px;
 }
 
 .grid-item {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px !important;
+  background-color: #EBECF0 !important
 }
 
-#player1, #player2 {
+#block0Player1, #block1Player1, #block2Player1, #block3Player1, #block4Player1, #block5Player1, #block6Player1, #block7Player1, #block8Player1, #block0Player2, #block1Player2, #block2Player2, #block3Player2, #block4Player2, #block5Player2, #block6Player2, #block7Player2, #block8Player2 {
   display: none;
 }
+

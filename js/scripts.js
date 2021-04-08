@@ -21,24 +21,27 @@ function Game() {
   this.blocks = {};//Pusing Every Block to the opject
   this.player1Win = {}//Whenever player1 pushes a button that specific block will be inputted into this object
   this.player2Win = {};//Whenever player2 pushes a button that specific blockw ill be inputted into this object
+
 }
 
-// Game.prototype.assignId = function () { //this method is for adding an id to every block
-//   this.currentId += 1;
-//   return this.currentId;
-// }
+Game.prototype.assignId = function () { //this method is for adding an id to every block
+  this.currentId += 1;
+  return this.currentId;
+}
 // Game.prototype.addBlock = function (id) { //method for adding a block into the block object
 //   block.id = this.assignId();
 //   this.blocks[block.id] = id
 // }
 
 Game.prototype.player1Button = function (block) {
-  this.player1Win[block] = block
+  block.id = this.assignId();
+  this.player1Win[block.id] = block;
 } //accessing the block object in the game constructor we are adding a block for player 1
 
 Game.prototype.player2Button = function (block) {
   this.player2Win[block] = block
 } //accessing the block object in the game constructor we are adding a block for player 2
+
 
 
 
@@ -107,17 +110,51 @@ Game.prototype.player2Button = function (block) {
 //         $("block8").player1Win.push();
 //       });
 //     }
+//
 
+//  The game should loop among 2 factors
+//1.if the board is full
+//2.if we have winner
+
+
+
+
+// we are trying
+
+function AddBlock(id) {
+  this.id = id;
+}
+
+AddBlock.prototype.addBlock = function () {
+  return this.id.toString()
+}
 
 let allBlocks = new Game();
 $(document).ready(function () {
   $("#block0Player1").on("click", function () {
-    allBlocks.player1Button.renameId(this.id)
+    let newBlock = new AddBlock
+    allBlocks.player1Button(newBlock)
+    console.log(this.player1Win)
+  })
+  $("#block1Player1").on("click", function () {
+    allBlocks.player1Button(this.id)
     console.log(this.id)
   })
 
-  // 
+  //   }
 
+  // const boardLoad = () => {
+  //   grid - container.innerHTMl = ""
+  //     //someting.forEach(index , i) =>` <button id="block${i}"
+  //     < button id = "block0Player2" class="btn btn-outline-danger text-uppercase" > Player 2</button > 
+
+  // }
+  // const allBottons = ["0", "1", "2", "3", "4", "5", "6", "7", "8" ];
+
+  //reset the board
+  $("#reset").on("click", function () {
+    location.reload();
+  })
 
   $("#addPlayer1").on("click", function () {
     $("button#block0Player1").show()
